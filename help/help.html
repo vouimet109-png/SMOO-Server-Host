@@ -24,9 +24,12 @@
     <section class="panel">
       <ol class="steps">
         <li><h3>Install Python</h3>
-          <p>Download Python 3.8 or newer from python.org. On Windows, tick “Add Python to PATH” during the install.</p></li>
+          <p>Download Python 3.8 or newer from python.org. On Windows, tick “Add Python to PATH” during the install.</p>
+          <a class="btn" href="https://www.python.org/downloads/" target="_blank" rel="noopener noreferrer">Download Python</a></li>
         <li><h3>Get the SMOO server</h3>
-          <p>Download SmoOnlineServer (open source) from its GitHub releases and unzip it in a folder. Run it once so it creates its files, then close it.</p></li>
+          <p>Download the file for your system from the SmoOnlineServer GitHub releases (open source): Server.exe on Windows, or Server, Server.arm or Server.arm64 on Linux. Put it in its own folder, run it once so it creates its files, then close it.</p>
+          <p>On Linux, allow the file to run first (chmod +x Server). On Mac there is no ready-made file: follow the build steps in the project's README.</p>
+          <a class="btn" href="https://github.com/Sanae6/SmoOnlineServer/releases" target="_blank" rel="noopener noreferrer">Open the SmoOnlineServer releases</a></li>
         <li><h3>Download the agent</h3>
           <p>It is a single readable file. It only writes settings.json, starts or stops the server and its tunnel, and reports if you are online. It never runs commands sent by the site.</p>
           <a class="btn" href="../agent.py" download>Download agent.py</a></li>
@@ -39,10 +42,9 @@
           <p>To change the key or the path later, run:</p>
           <pre><code>python agent.py --setup</code></pre></li>
         <li><h3>Hide your IP address</h3>
-          <p>Nothing to do: the agent opens a free tunnel for you (using bore, open source), so your IP stays hidden and you open no port on your router. The address your friends use appears on your server card once the agent runs. It changes each time you restart the agent.</p></li>
+          <p>Nothing to do: the agent opens a free tunnel for you (a small open-source client built into the agent, using the public relay bore.pub), so your IP stays hidden and you open no port on your router. The relay is run by a third party and can see your IP, but your friends cannot. The address your friends use appears on your server card once the agent runs. It changes each time you restart the agent.</p></li>
       </ol>
     </section>
-    <p class="sub">Screenshots will be added soon.</p>
   </main>
 
   <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
