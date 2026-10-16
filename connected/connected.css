@@ -1,0 +1,4 @@
+.done { text-align: center; }
+.check { width: 64px; height: 64px; margin: 0 auto 16px; border-radius: 50%; display: grid; place-items: center; font-size: 32px; font-weight: 800; background: rgba(90, 220, 150, 0.14); color: #7fe3ae; }
+.check.bad { background: rgba(255, 110, 110, 0.14); color: #ff9a9a; }
+.go { display: block; text-align: center; text-decoration: none; margin-top: 8px; }

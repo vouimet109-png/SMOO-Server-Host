@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#07080d">
+<style>html,body{background:#07080d;color:#d9dce9}</style>
+<title>Connected · SMOO Server Host</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&display=swap">
+<link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="../login/login.css">
+<link rel="stylesheet" href="connected.css">
+</head>
+<body>
+  <main class="splash">
+    <div class="glow" aria-hidden="true"></div>
+
+    <a class="mini-brand" href="../index.html">
+      <span class="logo small">
+        <img src="../logo.png" alt="" onerror="this.parentNode.classList.add('nologo');this.remove()">
+      </span>
+      <span>SMOO <b>Server Host</b></span>
+    </a>
+
+    <section class="card done" aria-live="polite">
+      <div class="check" id="icon" aria-hidden="true">&#10003;</div>
+      <h1 id="title">&nbsp;</h1>
+      <p class="sub" id="sub">&nbsp;</p>
+      <a class="submit go" id="go" href="../login/login.html" hidden>Sign in</a>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+  <script src="../connection/i18n.js"></script>
+  <script src="../connection/config.js"></script>
+  <script src="../connection/connected.js"></script>
+</body>
+</html>
