@@ -1,0 +1,8 @@
+/* Settings page only. Shared styles (incl. switches) are in ../app.css */
+.danger-row { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 12px 0; flex-wrap: wrap; }
+.danger-row + .danger-row { border-top: 1px solid rgba(255, 255, 255, 0.07); }
+.danger-row div { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.danger-row small { color: var(--muted); font-size: 12.5px; }
+
+#lang { width: 100%; padding: 12px 14px; border-radius: 12px; border: 1px solid rgba(255,255,255,.12); background: rgba(255,255,255,.05); color: inherit; font: inherit; }
+#lang option { background: #0d0f18; }

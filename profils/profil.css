@@ -1,0 +1,6 @@
+/* Profile page only. Shared styles are in ../app.css */
+.photo { display: flex; align-items: center; gap: 20px; margin-bottom: 24px; flex-wrap: wrap; }
+.photo-actions { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+.photo-actions .row { display: flex; gap: 8px; flex-wrap: wrap; }
+.photo-actions .sub { margin: 0; font-size: 12.5px; }
+.opt { color: var(--muted); font-weight: 600; }

@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#07080d">
+<style>html,body{background:#07080d;color:#d9dce9}</style>
+<title>My servers · SMOO Server Host</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&display=swap">
+<link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="../app.css">
+<link rel="stylesheet" href="dashboard.css">
+</head>
+<body class="app-body">
+  <header id="topbar"></header>
+
+  <main class="page">
+    <h1>My servers</h1>
+    <p class="sub"><span id="count">0</span> servers created</p>
+    <p class="devnote" id="devnote" hidden>Dev mode: you are not signed in. Servers are saved only in this browser.</p>
+    <section class="grid" id="grid" aria-live="polite"></section>
+
+    <section id="shared-wrap" hidden>
+      <h2 class="shared-title">Shared with me</h2>
+      <div class="grid" id="shared-grid"></div>
+    </section>
+  </main>
+
+  <dialog id="create" class="modal">
+    <form id="create-form" method="dialog" novalidate>
+      <h2>Create a server</h2>
+      <p class="sub">Choose a name for your server.</p>
+      <label for="server-name">Server name</label>
+      <input type="text" id="server-name" maxlength="24" autocomplete="off" placeholder="My Odyssey server" required>
+      <p class="msg error" id="create-msg" role="alert" hidden></p>
+      <div class="actions">
+        <button type="button" class="ghost" id="create-cancel">Cancel</button>
+        <button type="submit" class="submit">Create</button>
+      </div>
+    </form>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+  <script src="../connection/i18n.js"></script>
+  <script src="../connection/config.js"></script>
+  <script src="../connection/common.js"></script>
+  <script src="../connection/store.js"></script>
+  <script src="../connection/dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#07080d">
+<style>html,body{background:#07080d;color:#d9dce9}</style>
+<title>Help · SMOO Server Host</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&display=swap">
+<link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="../app.css">
+<link rel="stylesheet" href="help.css">
+</head>
+<body class="app-body">
+  <header id="topbar"></header>
+
+  <main class="page narrow">
+    <h1>Help</h1>
+    <p class="sub">Run your own SMOO server in 6 steps. It runs on your computer and you control it from this site.</p>
+
+    <section class="panel">
+      <ol class="steps">
+        <li><h3>Install Python</h3>
+          <p>Download Python 3.8 or newer from python.org. On Windows, tick “Add Python to PATH” during the install.</p></li>
+        <li><h3>Get the SMOO server</h3>
+          <p>Download SmoOnlineServer (open source) from its GitHub releases and unzip it in a folder. Run it once so it creates its files, then close it.</p></li>
+        <li><h3>Download the agent</h3>
+          <p>It is a single readable file. It only writes settings.json, starts or stops the server and its tunnel, and reports if you are online. It never runs commands sent by the site.</p>
+          <a class="btn" href="../agent.py" download>Download agent.py</a></li>
+        <li><h3>Get your server key</h3>
+          <p>Create a server on this site, open it with Manage, and copy the key from the Connection tab. Keep it secret.</p></li>
+        <li><h3>Run the agent</h3>
+          <p>Open a terminal in the folder of agent.py and run:</p>
+          <pre><code>python agent.py</code></pre>
+          <p>The first time, it asks for the key and the path of the server program. Leave the window open: settings you change on the site are applied within seconds.</p>
+          <p>To change the key or the path later, run:</p>
+          <pre><code>python agent.py --setup</code></pre></li>
+        <li><h3>Hide your IP address</h3>
+          <p>Nothing to do: the agent opens a free tunnel for you (using bore, open source), so your IP stays hidden and you open no port on your router. The address your friends use appears on your server card once the agent runs. It changes each time you restart the agent.</p></li>
+      </ol>
+    </section>
+    <p class="sub">Screenshots will be added soon.</p>
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+  <script src="../connection/i18n.js"></script>
+  <script src="../connection/config.js"></script>
+  <script src="../connection/common.js"></script>
+  <script>window.SMOO.init();</script>
+</body>
+</html>

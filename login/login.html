@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#07080d">
+<style>html,body{background:#07080d;color:#d9dce9}</style>
+<title>Sign in · SMOO Server Host</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&display=swap">
+<link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="login.css">
+</head>
+<body>
+  <main class="splash">
+    <div class="glow" aria-hidden="true"></div>
+
+    <a class="mini-brand" href="../index.html">
+      <span class="logo small">
+        <img src="../logo.png" alt="" onerror="this.parentNode.classList.add('nologo');this.remove()">
+      </span>
+      <span>SMOO <b>Server Host</b></span>
+    </a>
+
+    <form class="card" id="form" novalidate>
+      <div class="tabs" role="tablist" aria-label="Sign in or create an account">
+        <button type="button" role="tab" id="tab-in" aria-selected="true">Sign in</button>
+        <button type="button" role="tab" id="tab-up" aria-selected="false">Create account</button>
+      </div>
+
+      <h1 id="title">Sign in</h1>
+      <p class="sub" id="sub">Welcome back.</p>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" autocomplete="username" inputmode="email" required>
+
+      <label for="password">Password</label>
+      <div class="pw">
+        <input type="password" id="password" name="password" autocomplete="current-password" required>
+        <button type="button" id="toggle" aria-pressed="false">Show</button>
+      </div>
+
+      <div id="confirm-wrap" hidden>
+        <label for="confirm">Confirm password</label>
+        <input type="password" id="confirm" name="confirm" autocomplete="new-password">
+      </div>
+
+      <p class="msg" id="msg" role="alert" hidden></p>
+
+      <button type="submit" class="submit" id="submit">Sign in</button>
+      <button type="button" class="skip" id="skip" hidden>Skip for now</button>
+    </form>
+
+    <a class="back" href="../index.html">&larr; Back</a>
+  </main>
+
+  <!-- Supabase client (CDN), then the settings and logic from the connection folder. -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+  <script src="../connection/i18n.js"></script>
+  <script src="../connection/config.js"></script>
+  <script src="../connection/auth.js"></script>
+</body>
+</html>

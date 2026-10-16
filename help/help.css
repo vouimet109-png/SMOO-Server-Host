@@ -1,0 +1,7 @@
+.steps { margin: 0; padding-left: 22px; line-height: 1.65; }
+.steps li { margin-bottom: 26px; padding-left: 6px; }
+.steps li:last-child { margin-bottom: 0; }
+.steps h3 { margin: 0 0 6px; font-size: 16px; font-weight: 800; }
+.steps p { margin: 0 0 10px; color: var(--muted); }
+.steps pre { margin: 0 0 12px; padding: 12px 14px; border-radius: 10px; background: rgba(255,255,255,.06); overflow-x: auto; }
+.steps code { font-family: ui-monospace, Consolas, monospace; font-size: 14px; color: #e8ebf7; }
